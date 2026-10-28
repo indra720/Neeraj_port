@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-navy: #081B33;
+    --color-royal: #1557A6;
+    --color-gold: #C8A96B;
+    --color-sand: #F8F7F3;
+    --color-slate: #536174;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #F8F7F3;
+    color: #536174;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom styling for luxury touch */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #DFCA95 0%, #C8A96B 50%, #A68645 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #DFCA95 0%, #C8A96B 50%, #A68645 100%);
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(135deg, #DFCA95, #C8A96B, #A68645) 1;
+}
+
+.navy-gradient {
+  background: linear-gradient(180deg, #081B33 0%, #051224 100%);
+}
+
+.navy-radial {
+  background: radial-gradient(circle at 50% 20%, #102A4C 0%, #081B33 70%, #040D1A 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(200, 169, 107, 0.22);
+}
+
+/* Luxury Card Border Effect */
+.card-border-subtle {
+  border: 1px solid rgba(200, 169, 107, 0.18);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-border-subtle:hover {
+  border-color: rgba(200, 169, 107, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(8, 27, 51, 0.12), 0 0 20px rgba(200, 169, 107, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #081B33;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8A96B;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #DFCA95;
+}
+
+/* Subtle animation classes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Line clamp helpers */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
